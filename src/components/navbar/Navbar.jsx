@@ -18,7 +18,7 @@ const Navbar = () => {
                     Miftahul Islam
                 </motion.span>
              
-                <a href="/anim_s_resume (5).pdf" download className="download-cv">
+                <a href="/resume.pdf" download className="download-cv">
                     Download Resume
                 </a>
             </div>
