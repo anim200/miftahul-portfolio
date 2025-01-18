@@ -31,6 +31,7 @@
         width: 100%;
         height: 100%;
         overflow: hidden;
+        position: relative; /* Ensure correct stacking context */
 
         .wrapper {
             max-width: 1366px;
@@ -62,11 +63,11 @@
                 img {
                     width: 100%;
                     height: auto;
-                    object-fit: contain; /* Ensure the entire image is visible */
+                    object-fit: contain;
 
                     @include mobile {
-                        object-fit: contain; /* Prevent cropping in responsive mode */
-                        max-width: 100%; /* Ensure the image fits within its container */
+                        object-fit: contain;
+                        max-width: 100%;
                     }
                 }
             }
@@ -78,6 +79,8 @@
                 flex-direction: column;
                 gap: 30px;
                 justify-content: center;
+                position: relative;
+                z-index: 10; /* Ensures text and buttons are above other elements */
 
                 @include mobile {
                     transform: none !important;
@@ -104,20 +107,28 @@
                     }
                 }
 
-                button {
-                    background-color: orange;
-                    border: none;
-                    border-radius: 10px;
-                    padding: 10px;
-                    width: 200px;
-                    cursor: pointer;
+                .blinks {
+                    display: flex;
+                    gap: 10px;
+                    justify-content: center;
 
-                    @include mobile {
-                        width: 100px;
-                        margin-top: 20px;
+                    button {
+                        background-color: orange;
+                        border: none;
+                        border-radius: 10px;
+                        padding: 10px;
+                        width: 200px;
+                        cursor: pointer;
+                        z-index: 11; /* Ensure buttons are above everything */
+
+                        @include mobile {
+                            width: 100px;
+                            margin-top: 20px;
+                        }
                     }
                 }
             }
         }
     }
 }
+
