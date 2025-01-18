@@ -60,6 +60,9 @@ export default function Hero() {
             >
                 Full Stack Web Developer
             </motion.div>
+              <div className="imageContainer">
+                <img src="/hero2.png" alt="Hero Image" />
+            </div>
          
         </div>
     );
