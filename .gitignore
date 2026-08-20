@@ -23,3 +23,11 @@ dist-ssr
 *.sln
 *.sw?
 .vercel
+
+
+# Vagrant-generated machine files
+.vagrant/
+
+# Environment and secret files
+.env
+*.env
