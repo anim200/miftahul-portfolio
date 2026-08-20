@@ -22,7 +22,7 @@ export default function Hero() {
                     initial="initial"
                     animate="animate"
                 >
-                    <motion.h2 variants={textVariants}>Miftahul Islam</motion.h2>
+                    <motion.h2 variants={textVariants}><h1>Miftahul Islam — Updated Through Jenkins CI</h1></motion.h2>
                     <motion.h1 variants={textVariants}>Full Stack Web Developer</motion.h1>
                     <motion.div variants={textVariants} className="buttons">
                         <motion.a
